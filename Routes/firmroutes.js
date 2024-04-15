@@ -1,7 +1,7 @@
 const express=require("express");
 const routes=express.Router();
 const firmcontroller=require("../Controllers/Firmcontroller");
-const verifytoken=require("../middlewares/verifytoken.js")
+const verifytoken=require("../Middlewares/verifytoken.js")
 routes.post("/add-firm",verifytoken,firmcontroller.addfirm);
 routes.get("/uploads/:imagename",(req,res)=>{
     const imagename=req.params.imagename;
